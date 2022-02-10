@@ -116,6 +116,12 @@
 		"react/jsx-no-script-url": "error",
 		"react/jsx-no-useless-fragment": "error",
 
+        "react-hooks/exhaustive-deps": [
+            "warn", {
+              "additionalHooks": "useRecoilCallback"
+            }
+        ],
+
 		"unicorn/filename-case": [
 			"error",
 			{
