@@ -6,8 +6,6 @@ import {
   useRecoilValue,
 } from 'recoil';
 
-import logo from '../../public/logo.svg'
-
 import './index.css'
 
 
@@ -39,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src='/logo.svg' className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((previousState) => previousState + 1)}>
@@ -74,6 +72,9 @@ function App() {
             Vite Docs
           </a>
         </p>
+        <h1 class="text-4xl font-bold underline">
+          Hello world!
+        </h1>
       </header>
     </div>
   )
