@@ -1,15 +1,17 @@
-import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useRoutes } from 'react-router-dom';
 
-import Home from 'pages/Home';
+import routeConfig from './generaterRouteConfig';
+
+const Routers = () => {
+  const routers = useRoutes(routeConfig);
+  return routers;
+}
 
 function App(){
 
   return(
     <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-      </Routes>
+      <Routers />
     </BrowserRouter>
   )
 }

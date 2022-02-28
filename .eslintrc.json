@@ -7,7 +7,7 @@
 	},
 	"plugins": ["react-prefer-function-component"],
 	"extends": [
-		"eslint:all",
+		// "eslint:all",
 		"plugin:import/recommended",
 		"plugin:react/all",
 		"plugin:jsx-a11y/recommended",

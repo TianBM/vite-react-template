@@ -7,7 +7,9 @@ import istanbul from 'rollup-plugin-istanbul'
 import eslintPlugin from '@nabla/vite-plugin-eslint'
 import viteCompression from 'vite-plugin-compression';
 
-
+/**
+ * @type {import('vite').UserConfig}
+ */
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode })=>({
   server: {
@@ -21,10 +23,7 @@ export default defineConfig(({ command, mode })=>({
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, './src'),
-      "components": path.resolve(__dirname, './src/components'),
-      "pages": path.resolve(__dirname, './src/pages'),
-      "@public": path.resolve(__dirname, './public')
+      '@': path.resolve(__dirname, './src/'),
     }
   },
   plugins: [

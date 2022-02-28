@@ -14,5 +14,5 @@ ReactDOM.render(
       </RecoilRoot>
     </React.Suspense>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.querySelector('#root')
 )

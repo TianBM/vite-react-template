@@ -8,7 +8,6 @@ import {
 
 import './index.css'
 
-
 const textState = atom({
   key: 'textState', // unique ID (with respect to other atoms/selectors)
   default: '', // default value (aka initial value)
@@ -34,13 +33,17 @@ function App() {
     setText(event.target.value);
   };
 
+  const onClickCount = () => {
+    setCount((previousState) => previousState + 1)
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <img src='/logo.svg' className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((previousState) => previousState + 1)}>
+          <button type="button" onClick={onClickCount}>
             count is: {count}
           </button>
         </p>
@@ -72,7 +75,7 @@ function App() {
             Vite Docs
           </a>
         </p>
-        <h1 class="text-4xl font-bold underline">
+        <h1 className="text-4xl font-bold underline">
           Hello world!
         </h1>
       </header>
